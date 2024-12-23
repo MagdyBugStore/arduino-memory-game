@@ -226,7 +226,6 @@ void loop()
                 if (playerInput[currentInputIndex] != sequence[currentInputIndex])
                 {
                     playFailureTone();
-                    gameActive = false;
                     return;
                 }
 
@@ -236,8 +235,8 @@ void loop()
         }
         handleButtons();
     }
-    if(level > 0)
-    playWinnerTone();
+    if (level > 0)
+        playWinnerTone();
     level++;
     sequenceLength++;
     if (sequenceLength > 10)
