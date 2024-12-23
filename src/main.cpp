@@ -236,7 +236,7 @@ void loop()
         }
         handleButtons();
     }
-    if(level == 0) return;
+    if(level > 0)
     playWinnerTone();
     level++;
     sequenceLength++;
@@ -248,6 +248,3 @@ void loop()
 
     delay(1000);
 }
-
-// TODO: reset and start button
-// TODO: can change level while play
